@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pune</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h1  {
+        font-size: 50px;
+        font-family: "Baskerville Old Face";
+        border: 1px solid black;
+        width: 280px;
+        margin-top: 15px;
+        background-color: black;
+        color: white;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .container  {
+        margin-top: 30px;
+    }
+</style>
+<body>
+   <center>  <h1>Pune</h1> </center>
+<div class="container">
+<table class="table table-dark table-hover tabular table-bordered text-center">
+    <thead>
+    <tr>
+        <td>Company Name</td>
+        <td>Position</td>
+        <td>Experience</td>
+        <td>Domain</td>
+        <td>Skill</td>
+        <td>Email Id</td>
+    </tr>
+    </thead>
+    {% for data in pune %}
+        <tr>
+        <td>{{ data.company }}</td>
+        <td>{{ data.position }}</td>
+        <td>{{ data.experience }}</td>
+        <td>{{ data.domain }}</td>
+        <td>{{ data.skill }}</td>
+        <td>{{ data.email_id }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+</div>
+<center>
+    <a href="home">Go to home Page</a>
+</center>
+</body>
+</html>
